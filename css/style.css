@@ -1,0 +1,510 @@
+  /**Font Google***/
+  @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;1,700&display=swap");
+  /*  */
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  body {
+  font-family: "Work Sans", sans-serif ;
+  }
+  .parent {
+    background-color: #eee;
+  }
+  /* End Global Rules */
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+  @media (min-width: 576px) {
+    .container {
+      width: 200px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+
+  /* start Header */
+  .header {
+    padding: 20px;
+  }
+  .header .container {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .links {
+    position: relative;
+  }
+  .container .logo {
+    width: 60px;
+  }
+  .header .container .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .header .container .links .icon span {
+    background-color: #333;
+    margin-bottom: 5px;
+    height: 2px;
+  }
+  .header .container .links .icon span:first-child {
+    width: 100%;
+  }
+  .header .container .links .icon span:nth-child(2) {
+    width: 60%;
+  }
+  .header .container .links .icon span:last-child {
+    width: 100%;
+  }
+
+  .header .container .links .icon span:hover {
+    width: 100%;
+  }
+
+  .header .links ul::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-color: #f6f6f6;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -10px;
+    left: 169px;
+  }
+  .header .links ul {
+    background-color: #f6f6f6;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-width: 200px;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    display: none;
+  }
+  .header .links:hover ul {
+    display: block;
+  }
+
+  .header .links ul li a {
+    padding: 15px;
+    display: block;
+    color: #333;
+    transition: 0.3s;
+    text-decoration: none;
+    border-bottom: 2px solid #ddd;
+  }
+
+  .header .links ul li a:hover {
+    padding-left: 25px;
+  }
+  /* End Header */
+  /* Start image */
+  .image h1 {
+    margin: 0;
+    padding: 0;
+    color: #10cab7;
+  
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 58px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .image p {
+    margin: 0;
+  
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 34px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .image {
+    background-image: url("../images/landing.jpg");
+    z-index: -1;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    position: relative;
+  }
+  /* End image */
+  /* start section  features */
+  .features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+  }
+  .features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-rows: 1fr;
+    gap: 0px 50px;
+    grid-auto-flow: row;
+    grid-template-areas: "Idea Work Worldwide";
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+    justify-content: center;
+ 
+  }
+
+  .features h3 {
+    font-weight: 800;
+    font-size: 19px;
+    line-height: 21px;
+    padding-top: 15px;
+    padding-bottom: 40px;
+  }
+  .features i,
+  h3,
+  p {
+    display: flex;
+    justify-content: center;
+  }
+  .features p {
+    text-align: center;
+  
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 31px;
+    color: #777;
+  }
+  .Idea,
+  .Work,
+  .Worldwide {
+    width: 350px;
+  }
+  .Idea {
+    grid-area: Idea;
+  }
+
+  .Work {
+    grid-area: Work;
+  }
+
+  .Worldwide {
+    grid-area: Worldwide;
+  }
+  .fa-gem,
+  .fa-wand-magic-sparkles,
+  .fa-globe-asia {
+    color: #10cab7;
+  }
+  /* End section features  */
+/*#####################################*/
+  /* start  section Services  */
+  .Services-main {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .Services {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.8fr;
+    grid-template-rows: 0.3fr 1.7fr 1.7fr 0.3fr;
+    gap: 20px 30px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . image-Services"
+      "Graphic-Design Web-Design image-Services"
+      "UI-Services Web-Development image-Services"
+      ". . image-Services";
+
+  }
+  .image-Services img{
+      width: 260px;
+      height: 346.663px;
+      margin-top: 50px;
+   
+
+  }
+  .image-Services {
+
+    grid-area: image-Services;
+  }
+
+  .image-Services::before{
+      content: "";
+      background-color: #2C4755;
+      width: 120px;
+      height: 450px;
+      position: absolute;
+      top: 1210px;
+      z-index: -1;
+      right: 220px;
+  }
+  .Graphic-Design,
+  .Web-Design,
+  .Web-Development,
+  .UI-Services {
+
+    width: 300px;
+
+
+  }
+  .Graphic-Design {
+    grid-area: Graphic-Design;
+  }
+
+  .Web-Design {
+    grid-area: Web-Design;
+  }
+
+  .Web-Development {
+    grid-area: Web-Development;
+  }
+
+  .UI-Services {
+    grid-area: UI-Services;
+  }
+ .center {
+    text-align: center;
+    position: relative;
+
+  }
+
+  .Services-main .container .center{
+margin-bottom: 50px;
+  }
+.center h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: 800;
+    line-height: 115px;
+    font-size: 100px;
+    color: #ebeced;
+    margin: 0;
+
+
+  }
+ .center p {
+  
+    font-weight: 400;
+    font-size: 20px;
+    color: #797979;
+    margin-top: -30px;
+  }
+  .fas,
+  .fab {
+    color: #10cab7;
+    margin: 0;
+  }
+  .Services h3 {
+    margin-top: -30px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: flex-start;
+  }
+ p {
+  
+    font-weight: 300;
+    line-height: 26px;
+    font-size: 16px;
+    color: #444444;
+    margin-top: -30px;
+  }
+  .fa-palette,
+  .fa-vector-square,
+  .fa-pencil-ruler,
+  .fa-sketch {
+
+    margin-left: -50px;
+  }
+
+  /* End section Services  */
+
+   /* start section Portfolio  */
+   .Portfolio-main{
+    padding-top: 50px;    
+    background-color:#F6F6F6 ;   
+    height: 720px;
+}
+   .Portfolio-grid {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.7fr 1.5fr 0.8fr;
+    gap: 20px 30px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Portfolio-Title Portfolio-Title Portfolio-Title"
+      "Project-1 Project-2 Project-3"
+      ". . .";
+  }
+.Project-1,  .Project-2,  .Project-3{    background-color:#fff ;   }
+  .Portfolio-Title { grid-area: Portfolio-Title; }
+  
+  .Project-1 { grid-area: Project-1; height: 410px; }
+  
+  .Project-2 { grid-area: Project-2; }
+  
+  .Project-3 { grid-area: Project-3; }
+  
+.Portfolio-grid img{
+    width: 360px;
+}
+.Portfolio-grid h4{
+  
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 22px;
+   padding-bottom: 10px;
+   margin-left: 10px;
+  
+}
+.Portfolio-grid p{
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+  /* End section Portfolio  */
+/* Start section  About */
+.About-main {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    height: 670px;
+}
+.About-main .container .About-grid {  display: grid;
+    grid-template-columns: 1.3fr 0.7fr 1fr;
+    grid-template-rows: 0.7fr 1.5fr 1.5fr;
+    gap: 20px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "About-Title About-Title About-Title"
+      "p1 Lorem-1 Lorem-1"
+      "p1 Lorem-2 Lorem-2";
+      position: relative;
+  }
+  
+  .About-main .container  .About-grid .About-Title { grid-area: About-Title;  padding-bottom: 60px;}
+  
+  .About-main .container  .About-grid .p1 { grid-area: p1; margin-top: 20px;}
+  .About-main .container  .About-grid .p1 img{ width: 250px; height: 375px; }
+  .About-main .container  .About-grid .p1::after{
+      content: "";
+      width: 100px;
+    height: 460px;
+    background-color: #EBEDED;
+    position:absolute;
+    z-index: -1;
+    top: 190px;
+    left: -30px; 
+  }
+  .About-main .container  .About-grid  .p1::before{
+    top: 190px;
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 300px;
+    border-left: 80px solid #10cab7;
+    border-bottom: 80px solid #10cab7;
+    z-index: -1;
+    left: 230px; 
+
+}
+.About-main .container  .About-grid .Lorem-1 { grid-area: Lorem-1;  margin-top: 20px; height: 80px;}
+  #hr-about{
+      border: none;
+      outline: none;
+      background-color: #10cab7;
+      width: 300px;
+      height: 2px;
+      float: left;
+  }
+  .About-main .container .About-grid .Lorem-1 strong{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 32px;
+    color: black;
+  }
+  .About-main .container .About-grid .Lorem-1 #p-2{
+  
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #777777;
+    float: left;
+
+  }
+/* End section About */
+/* Start Contact */
+.Contact-main{
+    background-color: #f6f6f6;
+    padding-top: 60px;
+    text-align: center;
+    padding-bottom: 60px;
+}
+.Contact-main .container .Contact-Title {
+    margin-bottom: 80px;
+}
+.Contact-main .container h3{
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 40px;
+    color: #2c4755;
+}
+.Contact-main .container a{
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 40px;
+    color: #10cab7;
+    padding-bottom: 40px;
+    text-decoration: none;
+}
+.Social-Networks{
+    display: flex;
+justify-content: center;
+
+}
+.Social-Networks h4{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+   
+}
+.Social-Networks i{
+    margin-left: 10px;
+    margin-top: 22px;
+    color: #2c4755;
+}
+/* End section Contact */
+/*#######################*/
+/* start footer */
+.footer {
+    background-color: #2C4755;
+    color: #fff;
+}
+.footer .container{
+    padding-top: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.footer .container h3{
+
+}
+.footer .container h3 strong{
+    color: #10cab7;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+/* End footer */
